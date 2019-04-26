@@ -1,0 +1,60 @@
+﻿@model Veterinaria.Models.tbl_cliente
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Está seguro de que desea eliminar este elemento?</h3>
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @*@Html.DisplayNameFor(model => model.nombre_c)*@
+            Nombre
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_c)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.apellido_c)*@
+            Apellido
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellido_c)
+        </dd>
+
+        <dt>
+       @*     @Html.DisplayNameFor(model => model.fechaNacimiento_c)*@
+            Fecha de nacimiento
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaNacimiento_c)
+        </dd>
+
+        <dt>
+            Edad
+            @*@Html.DisplayNameFor(model => model.edad_c)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.edad_c)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-sm btn-danger" /> |
+            @Html.ActionLink("Volver a la lista", "Index", new { area = "" }, new { @class = "btn btn-sm btn-secondary" })
+        </div>
+    }
+</div>

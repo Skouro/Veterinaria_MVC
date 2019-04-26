@@ -1,0 +1,88 @@
+﻿@model Veterinaria.Models.tbl_mascotas
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Está seguro de que desea eliminar este elemento?</h3>
+<div>
+    <h4>Mascota</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nombre
+            @*@Html.DisplayNameFor(model => model.nombre_m)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_m)
+        </dd>
+
+        <dt>
+            Dueño
+            @*@Html.DisplayNameFor(model => model.tbl_cliente.nombre_c)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_cliente.nombre_c)
+        </dd>
+
+        <dt>
+            Especie
+            @*@Html.DisplayNameFor(model => model.tbl_especie.nombre_e)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_especie.nombre_e)
+        </dd>
+
+        <dt>
+            Raza
+            @*@Html.DisplayNameFor(model => model.tbl_raza.nombre_r)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_raza.nombre_r)
+        </dd>
+
+        <dt>
+            Sexo
+            @*@Html.DisplayNameFor(model => model.sexo_m)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sexo_m)
+        </dd>
+
+        <dt>
+            Fecha de nacimiento
+            @*@Html.DisplayNameFor(model => model.fechaNacimiento_m)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaNacimiento_m)
+        </dd>
+
+        <dt>
+            Edad
+            @*@Html.DisplayNameFor(model => model.edad_m)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.edad_m)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <input type="submit" value="Eliminar" class="btn btn-danger btn-sm"  /> |
+    @Html.ActionLink("Volver a la lista", "Index", new { area = "" }, new { @class = "btn btn-sm btn-secondary" })
+</div>
+    }
+</div>

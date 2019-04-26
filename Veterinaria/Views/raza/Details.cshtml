@@ -1,0 +1,27 @@
+﻿@model Veterinaria.Models.tbl_raza
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Raza</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nombre
+            @*@Html.DisplayNameFor(model => model.nombre_r)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_r)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Actualizar", "Edit", new { id = Model.id_r }, new { @class = "btn btn-sm btn-success" }) |
+    @Html.ActionLink("Volver a la lista", "Index", "raza",new { area = "" }, new { @class = "btn btn-sm btn-secondary" })
+</p>

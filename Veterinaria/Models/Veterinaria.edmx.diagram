@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2e050e50b1c04f36a635c785be78209a" Name="Diagram1">
+        <EntityTypeShape EntityType="veterinariaModel.tbl_cliente" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="veterinariaModel.tbl_especie" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="veterinariaModel.tbl_mascotas" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="veterinariaModel.tbl_productos" Width="1.5" PointX="7.5" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="veterinariaModel.tbl_profesional" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="veterinariaModel.tbl_raza" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="veterinariaModel.tbl_servicio" Width="1.5" PointX="7.5" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="veterinariaModel.tbl_tipoProducto" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="veterinariaModel.tbl_venta" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <AssociationConnector Association="veterinariaModel.FK__tbl_mascot__id_c__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="veterinariaModel.FK__tbl_mascot__id_e__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="veterinariaModel.FK__tbl_mascot__id_r__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="veterinariaModel.FK__tbl_venta__id_m__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="veterinariaModel.FK__tbl_produ__codig__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="veterinariaModel.FK__tbl_venta__codig__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="veterinariaModel.tbl_venta_Producto" ManuallyRouted="false" />
+        <AssociationConnector Association="veterinariaModel.tbl_venta_Servicio" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Veterinaria.Models.tbl_cliente>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Clientes</h2>
+
+<p>
+    @Html.ActionLink("Registrar nuevo cliente", "Create",new { area = "" }, new { @class = "btn btn-sm btn-primary" })
+</p>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Fecha de nacimiento</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nombre_c)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.apellido_c)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fechaNacimiento_c.Value)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.edad_c)
+                </td>
+                <td>
+                    @Html.ActionLink("Actualizar", "Edit", new { id = item.id_c }, new { @class = "badge badge-success" }) |
+                    @Html.ActionLink("Detalles", "Details", new { id = item.id_c }, new { @class = "badge badge-info" }) |
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.id_c }, new { @class = "badge badge-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

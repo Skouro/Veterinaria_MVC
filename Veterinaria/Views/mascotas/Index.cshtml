@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Veterinaria.Models.tbl_mascotas>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Registrar nueva mascota", "Create", new { area = "" }, new { @class = "btn btn-sm btn-primary" })
+</p>
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Fecha de Nacimiento</th>
+            <th scope="col">Dueño</th>
+            <th scope="col">Especie</th>
+            <th scope="col">Raza</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre_m)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.edad_m)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sexo_m)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechaNacimiento_m)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tbl_cliente.nombre_c)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tbl_especie.nombre_e)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tbl_raza.nombre_r)
+            </td>
+            <td>
+                @Html.ActionLink("Actualizar", "Edit", new { id = item.id_m }, new { @class = "badge badge-success" }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.id_m }, new { @class = "badge badge-info" }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.id_m }, new { @class = "badge badge-danger" })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+

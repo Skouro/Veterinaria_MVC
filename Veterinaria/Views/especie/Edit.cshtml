@@ -1,0 +1,43 @@
+﻿@model Veterinaria.Models.tbl_especie
+
+@{
+    ViewBag.Title = "Actualizar";
+}
+
+<h2>Actualizar</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Especie</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.id_e)
+
+    <div class="form-group">
+        <label class="col-form-label col-md-2">Nombre</label>
+        @*@Html.LabelFor(model => model.nombre_e, htmlAttributes: new { @class = "control-label col-md-2" })*@
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.nombre_e, new { htmlAttributes = new { @class = "form-control", @autocomplete="off" } })
+            @Html.ValidationMessageFor(model => model.nombre_e, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Actualizar" class="btn btn-sm btn-success" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Volver a la lista", "Index",new { area = "" }, new { @class = "btn btn-sm btn-secondary" })
+</div>
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

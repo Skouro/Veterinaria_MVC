@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Veterinaria.Models.tbl_raza>
+
+@{
+    ViewBag.Title = "Raza";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Registrar nueva raza", "Create", new { area = "" }, new { @class = "btn btn-sm btn-primary" })
+</p>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nombre_r)
+                </td>
+                <td>
+                    @Html.ActionLink("Actualizar", "Edit", new { id = item.id_r }, new { @class = "badge badge-success" }) |
+                    @Html.ActionLink("Detalles", "Details", new { id = item.id_r }, new { @class = "badge badge-info" }) |
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.id_r }, new { @class = "badge badge-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

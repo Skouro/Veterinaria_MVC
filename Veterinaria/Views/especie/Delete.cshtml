@@ -1,0 +1,35 @@
+﻿@model Veterinaria.Models.tbl_especie
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>
+    ¿Está seguro de que desea eliminar este elemento?
+</h3>
+<div>
+    <h4>Especie</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <label class="control-label col-md-2">Nombre</label>
+            @*@Html.DisplayNameFor(model => model.nombre_e)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_e)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-danger btn-sm" />
+            @Html.ActionLink("Volver a la lista", "Index" , new { area = "" }, new { @class = "btn btn-sm btn-secondary" })
+        </div>
+    }
+</div>
