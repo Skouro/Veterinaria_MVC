@@ -672,7 +672,7 @@ advertencia 6002: La tabla o vista 'veterinaria.dbo.tbl_venta_Servicio' no tiene
           <End Role="tbl_venta" Type="Self.tbl_venta" Multiplicity="*" />
           <End Role="tbl_servicio" Type="Self.tbl_servicio" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="veterinariaEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="veterinariaEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tbl_cliente" EntityType="Self.tbl_cliente" />
           <EntitySet Name="tbl_especie" EntityType="Self.tbl_especie" />
           <EntitySet Name="tbl_mascotas" EntityType="Self.tbl_mascotas" />
@@ -1045,7 +1045,7 @@ advertencia 6002: La tabla o vista 'veterinaria.dbo.tbl_venta_Servicio' no tiene
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="veterinariaModelStoreContainer" CdmEntityContainer="veterinariaEntities1">
+        <EntityContainerMapping StorageEntityContainer="veterinariaModelStoreContainer" CdmEntityContainer="veterinariaEntities">
           <EntitySetMapping Name="tbl_cliente">
             <EntityTypeMapping TypeName="veterinariaModel.tbl_cliente">
               <MappingFragment StoreEntitySet="tbl_cliente">

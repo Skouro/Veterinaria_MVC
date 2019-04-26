@@ -15,10 +15,10 @@ namespace Veterinaria.Models
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class veterinariaEntities1 : DbContext
+    public partial class veterinariaEntities : DbContext
     {
-        public veterinariaEntities1()
-            : base("name=veterinariaEntities1")
+        public veterinariaEntities()
+            : base("name=veterinariaEntities")
         {
         }
     

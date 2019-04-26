@@ -104,6 +104,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\business-frontpage.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\Site.css" />
@@ -171,6 +172,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\clienteController.cs" />
     <Compile Include="Controllers\especieController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\mascotasController.cs" />
     <Compile Include="Controllers\razaController.cs" />
     <Compile Include="Global.asax.cs">
@@ -329,6 +331,7 @@
     <Content Include="Views\mascotas\Details.cshtml" />
     <Content Include="Views\mascotas\Edit.cshtml" />
     <Content Include="Views\mascotas\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

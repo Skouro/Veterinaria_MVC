@@ -12,7 +12,7 @@ namespace Veterinaria.Controllers
 {
     public class clienteController : Controller
     {
-        private veterinariaEntities1 db = new veterinariaEntities1();
+        private veterinariaEntities db = new veterinariaEntities();
 
         // GET: cliente
         public ActionResult Index()
